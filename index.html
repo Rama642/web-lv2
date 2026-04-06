@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- SEO meta tagovi -->
+	<meta name="description" content="Filmovita - Otkrijte najbolje filmove svih žanrova. Pregledajte našu bazu filmova s ocjenama, trajanjima i detaljnim informacijama.">
+	<meta name="keywords" content="filmovi, Netflix, Hollywood, kino, recenzije filmova, žanrovi">
+	<meta name="author" content="Filmovita Tim">
+	<!-- Open Graph za društvene mreže -->
+	<meta property="og:title" content="Filmovita - Portal za ljubitelje filma">
+	<meta property="og:description" content="Otkrijte najbolje filmove svih žanrova">
+	<meta property="og:type" content="website">
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-index.css">
+	<title>Filmovita - Portal za ljubitelje filma</title>
+</head>
+
+<body>
+	<a href="#main-content" class="skip-link">Preskoči na glavni sadržaj</a>
+	
+	<header role="banner">
+		<h1>Dobrodošli na Filmovitu</h1>
+		<p class="tagline">Vaš vodič kroz svijet filma</p>
+	</header>
+
+	<!-- Navigacija s dropdown efektom bez JavaScripta -->
+	<nav role="navigation" aria-label="Glavna navigacija">
+		<input type="checkbox" id="nav-toggle" class="nav-toggle">
+		<label for="nav-toggle" class="nav-button" aria-label="Otvori/zatvori izbornik">
+			<span class="hamburger"></span>
+			<span class="menu-text">Izbornik</span>
+		</label>
+		
+		<ul class="nav-menu">
+			<li><a href="index.html" aria-current="page">Početna</a></li>
+			<li><a href="grafikon.html">Grafikoni</a></li>
+			<li><a href="slike.html">Galerija</a></li>
+			<li><a href="#contact">Kontakt</a></li>
+		</ul>
+	</nav>
+
+	<main id="main-content" role="main">
+		<section class="intro-section" aria-labelledby="intro-heading">
+			<h2 id="intro-heading">Otkrijte Svijet Filma</h2>
+			<p>Dobrodošli na Filmovitu, vašu destinaciju za otkrivanje najboljih filmova iz cijelog svijeta. 
+			   Pregledajte našu pažljivo odabranu kolekciju filmova različitih žanrova, od klasičnih 
+			   komedija do uzbudljivih akcijskih trilera.</p>
+		</section>
+
+		<div class="content-wrapper">
+			<!-- Glavna sekcija s tablicom -->
+			<section class="table-section" aria-labelledby="table-heading">
+				<h2 id="table-heading">Popis Filmova</h2>
+				
+				<!-- Filteri za tablicu -->
+				<div class="table-filters" role="group" aria-label="Filteri za tablicu">
+					<label for="genre-filter">Filtriraj po žanru:</label>
+					<select id="genre-filter" aria-label="Odaberi žanr">
+						<option value="all">Svi žanrovi</option>
+						<option value="drama">Drama</option>
+						<option value="komedija">Komedija</option>
+						<option value="akcija">Akcija</option>
+						<option value="horor">Horor</option>
+					</select>
+				</div>
+
+				<div class="table-container">
+					<table role="table" aria-label="Tablica filmova s detaljima">
+						<caption>Pregled filmova s osnovnim informacijama - ocjenama, trajanjem i zemljom podrijetla</caption>
+						<thead>
+							<tr>
+								<th scope="col">ID</th>
+								<th scope="col">Naslov</th>
+								<th scope="col">Godina</th>
+								<th scope="col">Žanr</th>
+								<th scope="col">Trajanje (min)</th>
+								<th scope="col">Država</th>
+								<th scope="col">Ocjena</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="ID">2</td>
+								<td data-label="Naslov">Bugs Bunny's Third Movie</td>
+								<td data-label="Godina">1982</td>
+								<td data-label="Žanr"><span class="genre-tag">Animacija</span></td>
+								<td data-label="Trajanje">76</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>7.7</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">3</td>
+								<td data-label="Naslov">18 anni tra una settimana</td>
+								<td data-label="Godina">1991</td>
+								<td data-label="Žanr"><span class="genre-tag">Drama</span></td>
+								<td data-label="Trajanje">98</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>6.5</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">17</td>
+								<td data-label="Naslov">Ride a Wild Pony</td>
+								<td data-label="Godina">1976</td>
+								<td data-label="Žanr"><span class="genre-tag">Romantični</span></td>
+								<td data-label="Trajanje">91</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>5.7</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">18</td>
+								<td data-label="Naslov">Diner</td>
+								<td data-label="Godina">1982</td>
+								<td data-label="Žanr"><span class="genre-tag">Komedija</span></td>
+								<td data-label="Trajanje">95</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>7.0</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">20</td>
+								<td data-label="Naslov">A che servono questi quattrini?</td>
+								<td data-label="Godina">1942</td>
+								<td data-label="Žanr"><span class="genre-tag">Komedija</span></td>
+								<td data-label="Trajanje">85</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>5.9</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">22</td>
+								<td data-label="Naslov">A ciascuno il suo</td>
+								<td data-label="Godina">1967</td>
+								<td data-label="Žanr"><span class="genre-tag">Drama</span></td>
+								<td data-label="Trajanje">93</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>7.6</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">23</td>
+								<td data-label="Naslov">Dead-Bang</td>
+								<td data-label="Godina">1989</td>
+								<td data-label="Žanr"><span class="genre-tag">Krimić</span></td>
+								<td data-label="Trajanje">109</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>6.0</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">24</td>
+								<td data-label="Naslov">A... come assassino</td>
+								<td data-label="Godina">1966</td>
+								<td data-label="Žanr"><span class="genre-tag">Triler</span></td>
+								<td data-label="Trajanje">80</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>5.2</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">26</td>
+								<td data-label="Naslov">At Close Range</td>
+								<td data-label="Godina">1986</td>
+								<td data-label="Žanr"><span class="genre-tag">Drama</span></td>
+								<td data-label="Trajanje">115</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>7.5</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">30</td>
+								<td data-label="Naslov">A Ghentar si muore facile</td>
+								<td data-label="Godina">1968</td>
+								<td data-label="Žanr"><span class="genre-tag">Avantura</span></td>
+								<td data-label="Trajanje">101</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>4.8</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">32</td>
+								<td data-label="Naslov">Sleeping with the Enemy</td>
+								<td data-label="Godina">1990</td>
+								<td data-label="Žanr"><span class="genre-tag">Drama</span></td>
+								<td data-label="Trajanje">96</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>5.0</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">34</td>
+								<td data-label="Naslov">In Bed With Madonna</td>
+								<td data-label="Godina">1990</td>
+								<td data-label="Žanr"><span class="genre-tag">Dokumentarni</span></td>
+								<td data-label="Trajanje">111</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>5.3</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">36</td>
+								<td data-label="Naslov">Bowery at Midnight</td>
+								<td data-label="Godina">1942</td>
+								<td data-label="Žanr"><span class="genre-tag">Horor</span></td>
+								<td data-label="Trajanje">62</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>5.1</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">37</td>
+								<td data-label="Naslov">A mezzanotte va la ronda del piacere</td>
+								<td data-label="Godina">1975</td>
+								<td data-label="Žanr"><span class="genre-tag">Komedija</span></td>
+								<td data-label="Trajanje">100</td>
+								<td data-label="Država">Italija</td>
+								<td data-label="Ocjena"><strong>5.8</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">38</td>
+								<td data-label="Naslov">Mr. Majestyk</td>
+								<td data-label="Godina">1974</td>
+								<td data-label="Žanr"><span class="genre-tag">Akcija</span></td>
+								<td data-label="Trajanje">105</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>6.2</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">45</td>
+								<td data-label="Naslov">Warning Sign</td>
+								<td data-label="Godina">1985</td>
+								<td data-label="Žanr"><span class="genre-tag">Akcija</span></td>
+								<td data-label="Trajanje">99</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>4.8</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">47</td>
+								<td data-label="Naslov">About Last Night</td>
+								<td data-label="Godina">1986</td>
+								<td data-label="Žanr"><span class="genre-tag">Komedija</span></td>
+								<td data-label="Trajanje">113</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>5.9</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">49</td>
+								<td data-label="Naslov">Fail-Safe</td>
+								<td data-label="Godina">1964</td>
+								<td data-label="Žanr"><span class="genre-tag">Drama</span></td>
+								<td data-label="Trajanje">110</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>8.2</strong></td>
+							</tr>
+							<tr>
+								<td data-label="ID">51</td>
+								<td data-label="Naslov">Some Like It Hot</td>
+								<td data-label="Godina">1959</td>
+								<td data-label="Žanr"><span class="genre-tag">Komedija</span></td>
+								<td data-label="Trajanje">120</td>
+								<td data-label="Država">SAD</td>
+								<td data-label="Ocjena"><strong>9.1</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- Aside s posterima filmova -->
+			<aside class="movie-posters" role="complementary" aria-labelledby="posters-heading">
+				<h3 id="posters-heading">Izdvojeni Filmovi</h3>
+				
+				<!-- Slika se mijenja ovisno o veličini ekrana -->
+				<figure class="poster-figure">
+					<picture>
+						<!-- Desktop verzija (velika slika) -->
+						<source media="(min-width: 1024px)" 
+						        srcset="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop" 
+						        width="400" height="600">
+						<!-- Tablet verzija (srednja slika) -->
+						<source media="(min-width: 768px)" 
+						        srcset="https://images.unsplash.com/photo-1574267432644-f610c622e08f?w=350&h=500&fit=crop" 
+						        width="350" height="500">
+						<!-- Mobile verzija (mala slika) -->
+						<img src="https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=300&h=400&fit=crop" 
+						     alt="Poster filma Some Like It Hot - klasična komedija iz 1959."
+						     loading="lazy"
+						     width="300" height="400"
+						     class="poster-image">
+					</picture>
+					<figcaption>Some Like It Hot (1959) - Ocjena: 9.1</figcaption>
+				</figure>
+
+				<figure class="poster-figure">
+					<picture>
+						<source media="(min-width: 1024px)" 
+						        srcset="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400&h=600&fit=crop" 
+						        width="400" height="600">
+						<source media="(min-width: 768px)" 
+						        srcset="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=350&h=500&fit=crop" 
+						        width="350" height="500">
+						<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300&h=400&fit=crop" 
+						     alt="Poster filma Fail-Safe - drama iz 1964."
+						     loading="lazy"
+						     width="300" height="400"
+						     class="poster-image">
+					</picture>
+					<figcaption>Fail-Safe (1964) - Ocjena: 8.2</figcaption>
+				</figure>
+
+				<div class="cta-box">
+					<h4>Želite vidjeti više?</h4>
+					<p>Posjetite našu stranicu s grafikonima za detaljnu analizu filmova po žanrovima.</p>
+					<a href="grafikon.html" class="cta-button" aria-label="Pregledaj grafikone filmova">Pogledaj Grafikone</a>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Dodatna sekcija s informacijama -->
+		<section class="info-section" aria-labelledby="info-heading">
+			<h2 id="info-heading">Zašto Filmovita?</h2>
+			<div class="info-grid">
+				<article class="info-card">
+					<h3>🎬 Raznolika Kolekcija</h3>
+					<p>Od klasičnih filmova do modernih hitova, naša baza sadrži filmove svih žanrova i epoha.</p>
+				</article>
+				<article class="info-card">
+					<h3>⭐ Provjerene Ocjene</h3>
+					<p>Sve ocjene filmova su temeljene na provjerenim izvorima i recenzijama publike.</p>
+				</article>
+				<article class="info-card">
+					<h3>📊 Detaljne Statistike</h3>
+					<p>Pristupite grafikonima i analizama koje vam pomažu otkriti najbolje filmove.</p>
+				</article>
+			</div>
+		</section>
+
+		<!-- Kontakt sekcija -->
+		<section id="contact" class="contact-section" aria-labelledby="contact-heading">
+			<h2 id="contact-heading">Kontaktirajte Nas</h2>
+			<form class="contact-form" aria-label="Kontakt forma">
+				<div class="form-group">
+					<label for="name">Ime i prezime:</label>
+					<input type="text" id="name" name="name" required aria-required="true">
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email" required aria-required="true">
+				</div>
+				<div class="form-group">
+					<label for="message">Poruka:</label>
+					<textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+				</div>
+				<button type="submit" class="submit-button">Pošalji Poruku</button>
+			</form>
+		</section>
+	</main>
+
+	<footer role="contentinfo">
+		<div class="footer-content">
+			<p>&copy; 2025 Filmovita. Sva prava pridržana.</p>
+			<nav aria-label="Footer navigacija">
+				<ul class="footer-links">
+					<li><a href="#" aria-label="Politika privatnosti">Privatnost</a></li>
+					<li><a href="#" aria-label="Uvjeti korištenja">Uvjeti</a></li>
+					<li><a href="#contact" aria-label="Kontakt stranica">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>

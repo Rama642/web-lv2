@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Grafikoni i statistike filmova po žanrovima - vizualna analiza filmske baze">
+	<meta name="keywords" content="grafikoni, statistike, žanrovi filmova, analiza">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-grafikon.css">
+	<title>Grafikoni - Filmovita</title>
+</head>
+
+<body>
+	<a href="#main-content" class="skip-link">Preskoči na glavni sadržaj</a>
+	
+	<header role="banner">
+		<h1>Statistike i Grafikoni</h1>
+		<p class="tagline">Vizualna analiza filmova po žanrovima</p>
+	</header>
+
+	<nav role="navigation" aria-label="Glavna navigacija">
+		<input type="checkbox" id="nav-toggle" class="nav-toggle">
+		<label for="nav-toggle" class="nav-button" aria-label="Otvori/zatvori izbornik">
+			<span class="hamburger"></span>
+			<span class="menu-text">Izbornik</span>
+		</label>
+		
+		<ul class="nav-menu">
+			<li><a href="index.html">Početna</a></li>
+			<li><a href="grafikon.html" aria-current="page">Grafikoni</a></li>
+			<li><a href="slike.html">Galerija</a></li>
+			<li><a href="index.html#contact">Kontakt</a></li>
+		</ul>
+	</nav>
+
+	<main id="main-content" role="main">
+		<!-- Uvod -->
+		<section class="intro-section" aria-labelledby="intro-heading">
+			<h2 id="intro-heading">Analiza Filmova</h2>
+			<p>Pregledajte vizualne prikaze distribucije filmova po žanrovima. Podaci su prikazani 
+			   pomoću kružnog grafikona (pie chart) i histograma, s različitim prikazima ovisno o 
+			   veličini vašeg ekrana.</p>
+		</section>
+
+		<!-- Kontrole za odabir prikaza -->
+		<div class="chart-controls" role="group" aria-label="Kontrole za grafikone">
+			<input type="radio" name="chart-type" id="show-pie" class="chart-radio" checked>
+			<label for="show-pie" class="chart-label">
+				<span class="label-icon">🥧</span>
+				Kružni Grafikon
+			</label>
+			
+			<input type="radio" name="chart-type" id="show-histogram" class="chart-radio">
+			<label for="show-histogram" class="chart-label">
+				<span class="label-icon">📊</span>
+				Histogram
+			</label>
+		</div>
+
+		<!-- PIE CHART -->
+		<section class="chart-section pie-section" aria-labelledby="pie-heading">
+			<h2 id="pie-heading">Distribucija Filmova po Žanrovima - Kružni Grafikon</h2>
+			
+			<div class="chart-container">
+				<!-- CSS-only Pie Chart -->
+				<div class="pie-chart" role="img" aria-label="Kružni grafikon pokazuje distribuciju filmova: Komedija 26%, Drama 26%, Akcija 11%, ostali žanrovi manje od 10%">
+					<div class="pie-segment" data-genre="Komedija"></div>
+					<div class="pie-center">
+						<span class="pie-total">19</span>
+						<span class="pie-label">Filmova</span>
+					</div>
+				</div>
+				
+				<!-- Legenda -->
+				<div class="chart-legend" role="list" aria-label="Legenda grafikona">
+					<div class="legend-item" role="listitem">
+						<span class="legend-color" style="background-color: var(--color-komedija);"></span>
+						<span class="legend-text">Komedija</span>
+						<span class="legend-value">5 (26%)</span>
+					</div>
+					<div class="legend-item" role="listitem">
+						<span class="legend-color" style="background-color: var(--color-drama);"></span>
+						<span class="legend-text">Drama</span>
+						<span class="legend-value">5 (26%)</span>
+					</div>
+					<div class="legend-item" role="listitem">
+						<span class="legend-color" style="background-color: var(--color-akcija);"></span>
+						<span class="legend-text">Akcija</span>
+						<span class="legend-value">2 (11%)</span>
+					</div>
+					<div class="legend-item" role="listitem">
+						<span class="legend-color" style="background-color: var(--color-ostalo);"></span>
+						<span class="legend-text">Ostalo</span>
+						<span class="legend-value">7 (37%)</span>
+					</div>
+				</div>
+			</div>
+
+			<p class="chart-description">
+				<strong>Analiza:</strong> Komedija i drama dominiraju našom bazom filmova, 
+				s po 5 filmova (26% svaka). Akcijski filmovi zauzimaju 11%, dok ostali žanrovi 
+				(animacija, romantični, krimić, triler, avantura, dokumentarni, horor) zajedno 
+				čine 37% kolekcije.
+			</p>
+		</section>
+
+		<!-- HISTOGRAM -->
+		<section class="chart-section histogram-section" aria-labelledby="histogram-heading">
+			<h2 id="histogram-heading">Broj Filmova po Žanrovima - Histogram</h2>
+			
+			<div class="histogram-container" role="img" aria-label="Histogram prikazuje broj filmova po žanrovima: Komedija i Drama imaju najviše sa 5 filmova, Akcija 2, ostali žanrovi po 1 film">
+				<!-- Svaka bar predstavlja žanr -->
+				<div class="histogram-bar" data-genre="Komedija" style="--bar-value: 5; --bar-color: var(--color-komedija);">
+					<div class="bar-fill">
+						<span class="bar-value">5</span>
+					</div>
+					<span class="bar-label">Komedija</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Drama" style="--bar-value: 5; --bar-color: var(--color-drama);">
+					<div class="bar-fill">
+						<span class="bar-value">5</span>
+					</div>
+					<span class="bar-label">Drama</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Akcija" style="--bar-value: 2; --bar-color: var(--color-akcija);">
+					<div class="bar-fill">
+						<span class="bar-value">2</span>
+					</div>
+					<span class="bar-label">Akcija</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Animacija" style="--bar-value: 1; --bar-color: var(--color-animacija);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Animacija</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Romantični" style="--bar-value: 1; --bar-color: var(--color-romantican);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Romantični</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Krimić" style="--bar-value: 1; --bar-color: var(--color-krimic);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Krimić</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Triler" style="--bar-value: 1; --bar-color: var(--color-triler);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Triler</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Avantura" style="--bar-value: 1; --bar-color: var(--color-avantura);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Avantura</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Dokumentarni" style="--bar-value: 1; --bar-color: var(--color-dokumentarni);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Dokumentarni</span>
+				</div>
+				
+				<div class="histogram-bar" data-genre="Horor" style="--bar-value: 1; --bar-color: var(--color-horor);">
+					<div class="bar-fill">
+						<span class="bar-value">1</span>
+					</div>
+					<span class="bar-label">Horor</span>
+				</div>
+			</div>
+
+			<p class="chart-description">
+				<strong>Detaljna razdioba:</strong> Histogram jasno prikazuje da su komedija i 
+				drama najzastupljeniji žanrovi s po 5 filmova. Akcijski žanr slijedi s 2 filma, 
+				dok svaki od ostalih žanrova ima po 1 film u našoj kolekciji.
+			</p>
+		</section>
+
+		<!-- Dodatne statistike -->
+		<section class="stats-section" aria-labelledby="stats-heading">
+			<h2 id="stats-heading">Dodatne Statistike</h2>
+			
+			<div class="stats-grid">
+				<div class="stat-card">
+					<div class="stat-icon">🎬</div>
+					<div class="stat-number">19</div>
+					<div class="stat-label">Ukupno Filmova</div>
+				</div>
+				
+				<div class="stat-card">
+					<div class="stat-icon">🎭</div>
+					<div class="stat-number">10</div>
+					<div class="stat-label">Različitih Žanrova</div>
+				</div>
+				
+				<div class="stat-card">
+					<div class="stat-icon">⭐</div>
+					<div class="stat-number">9.1</div>
+					<div class="stat-label">Najbolja Ocjena</div>
+					<div class="stat-detail">Some Like It Hot</div>
+				</div>
+				
+				<div class="stat-card">
+					<div class="stat-icon">🕐</div>
+					<div class="stat-number">93</div>
+					<div class="stat-label">Prosječno Trajanje (min)</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Poziv na akciju -->
+		<section class="cta-section">
+			<h2>Želite vidjeti kompletnu listu?</h2>
+			<p>Posjetite našu početnu stranicu za detaljnu tablicu svih filmova.</p>
+			<a href="index.html" class="cta-button">Nazad na Početnu</a>
+		</section>
+	</main>
+
+	<footer role="contentinfo">
+		<div class="footer-content">
+			<p>&copy; 2025 Filmovita. Sva prava pridržana.</p>
+			<nav aria-label="Footer navigacija">
+				<ul class="footer-links">
+					<li><a href="#" aria-label="Politika privatnosti">Privatnost</a></li>
+					<li><a href="#" aria-label="Uvjeti korištenja">Uvjeti</a></li>
+					<li><a href="index.html#contact" aria-label="Kontakt stranica">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+</body>
+</html>

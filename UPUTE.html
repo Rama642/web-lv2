@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmovita - Upute za pokretanje</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f4f4f4;
+            line-height: 1.6;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e50914;
+            border-bottom: 3px solid #e50914;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #221f1f;
+            margin-top: 30px;
+        }
+        .file-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #e50914;
+            margin: 20px 0;
+        }
+        .file-list li {
+            margin: 8px 0;
+            font-family: 'Courier New', monospace;
+        }
+        .step {
+            background: #e8f4f8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #4FC3F7;
+        }
+        .important {
+            background: #fff3cd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        .success {
+            background: #d4edda;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            border-left: 4px solid #28a745;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        a {
+            color: #e50914;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Filmovita - LV1 Zadatak</h1>
+        
+        <div class="success">
+            <strong>✅ Projekt je uspješno kreiran!</strong><br>
+            Sve potrebne datoteke su generirane i spremne za korištenje.
+        </div>
+
+        <h2>📁 Kreirani fajlovi</h2>
+        <div class="file-list">
+            <ul>
+                <li><strong>index.html</strong> - Glavna stranica s tablicom filmova</li>
+                <li><strong>grafikon.html</strong> - Stranica s CSS-only grafikonima</li>
+                <li><strong>slike.html</strong> - Galerija s lightbox efektom</li>
+                <li><strong>style.css</strong> - Zajednički stilovi</li>
+                <li><strong>style-index.css</strong> - Stilovi za index.html</li>
+                <li><strong>style-grafikon.css</strong> - Stilovi za grafikon.html</li>
+                <li><strong>style-slike.css</strong> - Stilovi za slike.html</li>
+                <li><strong>README.md</strong> - Dokumentacija projekta</li>
+                <li><strong>UPUTE.html</strong> - Ovaj fajl s uputama</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Kako pokrenuti projekt</h2>
+        
+        <div class="step">
+            <strong>Korak 1:</strong> Preuzmite sve fajlove u istu mapu na vašem računalu
+        </div>
+        
+        <div class="step">
+            <strong>Korak 2:</strong> Dvostrukim klikom otvorite <code>index.html</code> u web pregledniku
+        </div>
+        
+        <div class="step">
+            <strong>Korak 3:</strong> Koristite navigaciju za prelazak između stranica:
+            <ul>
+                <li>Početna - index.html</li>
+                <li>Grafikoni - grafikon.html</li>
+                <li>Galerija - slike.html</li>
+            </ul>
+        </div>
+
+        <h2>🌐 Objava na internetu</h2>
+        
+        <p>Za objavu projekta na internetu, koristite jedan od sljedećih servisa:</p>
+        
+        <div class="step">
+            <strong>GitHub Pages (preporučeno):</strong>
+            <ol>
+                <li>Kreirajte GitHub repozitorij</li>
+                <li>Uploadajte sve fajlove</li>
+                <li>Idite na Settings > Pages</li>
+                <li>Odaberite branch (main) i Save</li>
+                <li>Vaša stranica će biti dostupna na: <code>https://vase-ime.github.io/naziv-repozitorija/</code></li>
+            </ol>
+            <a href="https://pages.github.com/" target="_blank">📖 GitHub Pages dokumentacija</a>
+        </div>
+        
+        <div class="step">
+            <strong>Netlify Drop:</strong>
+            <ol>
+                <li>Posjetite <a href="https://app.netlify.com/drop" target="_blank">netlify.com/drop</a></li>
+                <li>Prevucite mapu s fajlovima na stranicu</li>
+                <li>Dobijete instant live link</li>
+            </ol>
+        </div>
+        
+        <div class="step">
+            <strong>Vercel:</strong>
+            <ol>
+                <li>Instalirajte Vercel CLI: <code>npm i -g vercel</code></li>
+                <li>U mapi projekta pokrenite: <code>vercel</code></li>
+                <li>Pratite upute za deployment</li>
+            </ol>
+        </div>
+
+        <h2>✨ Implementirane funkcionalnosti</h2>
+        
+        <h3>index.html</h3>
+        <ul>
+            <li>✅ Semantički HTML s ARIA atributima</li>
+            <li>✅ SEO meta tagovi</li>
+            <li>✅ Dropdown navigacija bez JavaScripta</li>
+            <li>✅ Responzivna tablica filmova</li>
+            <li>✅ Aside s posterima (različite slike za različite rezolucije)</li>
+            <li>✅ Kontakt forma</li>
+            <li>✅ Grid/Flexbox layout</li>
+        </ul>
+        
+        <h3>grafikon.html</h3>
+        <ul>
+            <li>✅ CSS-only Pie Chart s conic-gradient</li>
+            <li>✅ CSS-only Histogram</li>
+            <li>✅ Animacije pri učitavanju</li>
+            <li>✅ Hover efekti s dodatnim informacijama</li>
+            <li>✅ Različiti prikazi za različite rezolucije</li>
+            <li>✅ Kontrole za odabir grafikona (radio buttons bez JS)</li>
+            <li>✅ CSS varijable za boje</li>
+        </ul>
+        
+        <h3>slike.html</h3>
+        <ul>
+            <li>✅ Grid galerija slika</li>
+            <li>✅ Lightbox efekt bez JavaScripta (:target pseudo-klasa)</li>
+            <li>✅ Lazy loading za sve slike</li>
+            <li>✅ Zoom efekt pri hoveru</li>
+            <li>✅ Responzivni prikaz</li>
+        </ul>
+
+        <h2>🎨 Tehnike korištene u projektu</h2>
+        
+        <div class="important">
+            <strong>Sve bez JavaScripta!</strong> Projekt je izgrađen isključivo s HTML-om i CSS-om, 
+            koristeći napredne CSS tehnike:
+            <ul>
+                <li>:checked pseudo-klasa za dropdown menu</li>
+                <li>:target pseudo-klasa za lightbox</li>
+                <li>conic-gradient za pie chart</li>
+                <li>CSS Grid i Flexbox za layout</li>
+                <li>CSS animacije i transformacije</li>
+                <li>Media queries za responzivnost</li>
+                <li>CSS varijable za lako održavanje</li>
+            </ul>
+        </div>
+
+        <h2>🧪 Testiranje</h2>
+        
+        <p>Testirajte projekt na:</p>
+        <ul>
+            <li><strong>Desktop:</strong> Chrome, Firefox, Safari, Edge</li>
+            <li><strong>Tablet:</strong> iPad, Android tableti (koristi DevTools)</li>
+            <li><strong>Mobile:</strong> iPhone, Android telefoni (koristi DevTools)</li>
+        </ul>
+        
+        <p>Alati za testiranje pristupačnosti:</p>
+        <ul>
+            <li><strong>ChromeVox:</strong> Screen reader ekstenzija za Chrome</li>
+            <li><strong>WAVE:</strong> Web accessibility evaluation tool</li>
+            <li><strong>Lighthouse:</strong> Ugrađen u Chrome DevTools</li>
+        </ul>
+
+        <h2>📝 Nakon objave</h2>
+        
+        <div class="important">
+            <strong>Važno!</strong> Nakon što objavite stranicu, ne zaboravite:
+            <ol>
+                <li>Dodati link na objavljenu stranicu u <code>README.md</code></li>
+                <li>Testirati sve funkcionalnosti na live verziji</li>
+                <li>Provjeriti da sve slike i CSS fajlovi rade</li>
+                <li>Testirati responzivnost na pravim mobilnim uređajima</li>
+            </ol>
+        </div>
+
+        <h2>💡 Savjeti</h2>
+        
+        <ul>
+            <li>Sve slike se učitavaju s Unsplash servisa - internet konekcija je potrebna</li>
+            <li>Za brže učitavanje, razmislite o downloadanju slika lokalno</li>
+            <li>CSS fajlovi su organizirani modularno - lako ih je modificirati</li>
+            <li>Koristite ChromeVox za testiranje pristupačnosti</li>
+            <li>Otvorite DevTools (F12) za testiranje responzivnosti</li>
+        </ul>
+
+        <h2>📧 Kontakt</h2>
+        
+        <p>Za pitanja ili probleme vezane za projekt, kontaktirajte:</p>
+        <p><strong>Email:</strong> info@filmovita.hr (primjer)</p>
+
+        <div class="success">
+            <strong>🎉 Projekt je spreman!</strong><br>
+            Otvorite <code>index.html</code> i uživajte u istraživanju Filmovite!
+        </div>
+    </div>
+</body>
+</html>

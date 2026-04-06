@@ -1,0 +1,359 @@
+/* ==================== */
+/* OPĆI STILOVI - ZAJEDNIČKI ZA SVE STRANICE */
+/* ==================== */
+
+/* CSS VARIJABLE */
+:root {
+	--primary-color: #e50914;
+	--secondary-color: #221f1f;
+	--accent-color: #f5f5f1;
+	--text-color: #333;
+	--light-gray: #f4f4f4;
+	--border-color: #ddd;
+	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	--transition: all 0.3s ease;
+	--border-radius: 8px;
+}
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	color: var(--text-color);
+	background-color: var(--light-gray);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+/* HEADER I NAVIGACIJA (ako nisu specifično definirani u drugim CSS-ovima) */
+header {
+	background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+	color: white;
+	padding: 40px 20px;
+	text-align: center;
+	box-shadow: var(--shadow);
+}
+
+header h1 {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+	font-size: 1.1rem;
+	opacity: 0.9;
+}
+
+/* SKIP LINK za pristupačnost */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: var(--primary-color);
+	color: white;
+	padding: 8px;
+	text-decoration: none;
+	z-index: 100;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+/* NAVIGACIJA */
+nav {
+	background-color: var(--secondary-color);
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-toggle {
+	display: none;
+}
+
+.nav-button {
+	display: none;
+	background-color: var(--primary-color);
+	color: white;
+	padding: 15px 20px;
+	cursor: pointer;
+	align-items: center;
+	gap: 10px;
+	transition: var(--transition);
+}
+
+.hamburger {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	position: relative;
+	transition: var(--transition);
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	transition: var(--transition);
+}
+
+.hamburger::before {
+	top: -8px;
+}
+
+.hamburger::after {
+	top: 8px;
+}
+
+.nav-toggle:checked ~ .nav-button .hamburger {
+	background-color: transparent;
+}
+
+.nav-toggle:checked ~ .nav-button .hamburger::before {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+.nav-toggle:checked ~ .nav-button .hamburger::after {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+.nav-menu {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-menu li {
+	position: relative;
+}
+
+.nav-menu a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 18px 25px;
+	transition: var(--transition);
+	font-weight: 500;
+	border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+	background-color: var(--primary-color);
+	border-bottom-color: white;
+}
+
+.nav-menu a[aria-current="page"] {
+	background-color: rgba(229, 9, 20, 0.3);
+	border-bottom-color: var(--primary-color);
+}
+
+/* INTRO SEKCIJE */
+.intro-section {
+	background: white;
+	padding: 40px;
+	margin: 30px auto;
+	max-width: 1200px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	text-align: center;
+}
+
+.intro-section h2 {
+	color: var(--primary-color);
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.intro-section p {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: var(--text-color);
+}
+
+/* FOOTER */
+footer {
+	background: var(--secondary-color);
+	color: white;
+	padding: 30px 20px;
+	text-align: center;
+	margin-top: auto;
+}
+
+.footer-content {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.footer-links {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 15px;
+	padding: 0;
+}
+
+.footer-links a {
+	color: white;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+	.nav-button {
+		display: flex;
+	}
+	
+	.nav-menu {
+		display: none;
+		flex-direction: column;
+		background-color: var(--secondary-color);
+	}
+	
+	.nav-toggle:checked ~ .nav-menu {
+		display: flex;
+	}
+	
+	.nav-menu a {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+	
+	header h1 {
+		font-size: 1.8rem;
+	}
+	
+	.tagline {
+		font-size: 1rem;
+	}
+	
+	.intro-section {
+		padding: 25px 15px;
+		margin: 20px 15px;
+	}
+	
+	.intro-section h2 {
+		font-size: 1.5rem;
+	}
+	
+	.intro-section p {
+		font-size: 1rem;
+	}
+	
+	.footer-links {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	header h1 {
+		font-size: 1.5rem;
+	}
+	
+	.intro-section {
+		padding: 20px 10px;
+	}
+}
+
+/* ACCESSIBILITY */
+/* Focus vidljivost za keyboard navigaciju */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 2px;
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+	:root {
+		--primary-color: #ff0000;
+		--secondary-color: #000000;
+		--text-color: #000000;
+		--light-gray: #ffffff;
+		--border-color: #000000;
+	}
+	
+	* {
+		border-color: var(--border-color) !important;
+	}
+}
+
+/* Print styles */
+@media print {
+	nav,
+	.skip-link {
+		display: none;
+	}
+	
+	body {
+		background: white;
+	}
+	
+	header {
+		background: none;
+		color: black;
+		box-shadow: none;
+		border-bottom: 2px solid black;
+	}
+	
+	a {
+		color: black;
+		text-decoration: underline;
+	}
+	
+	footer {
+		background: none;
+		color: black;
+		border-top: 2px solid black;
+	}
+}
